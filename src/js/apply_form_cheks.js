@@ -14,6 +14,7 @@ function buttonClicked() {
   if (validateName(name) == false) {
     text = "Bad name pls try again <br> ";
   }
+  //get valu of adress and test it
   var address = document.getElementById("inputAddress").value;
   console.log(validateAddress(address));
   if (validateAddress(address) == false) {
@@ -22,6 +23,7 @@ function buttonClicked() {
   } else {
   }
 
+  // is de text is not empty or undifined show the error
   if (text) {
     document.getElementById("validation").innerHTML = text;
     document.getElementById("validationAlert").style.display = "block";
