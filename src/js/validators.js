@@ -8,6 +8,17 @@ export function validateName(name) {
   }
   return true;
 }
-export function validateAddress(address) {}
+export function validateAddress(address) {
+  var fulladdress = address.split(" ");
+  var addressnummer = fulladdress[fulladdress.length - 1];
+  var regex = /[0-9]+/g;
+  var l = addressnummer.search(regex);
+  if (l == -1) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
 export function validateCity(name) {}
 export function validatePostalCode(name) {}
