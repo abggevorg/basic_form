@@ -9,15 +9,14 @@ export function validateName(name) {
   return true;
 }
 export function validateAddress(address) {
+  //split the address and get the last section of the addres
   var fulladdress = address.split(" ");
   var addressnummer = fulladdress[fulladdress.length - 1];
+  //search for numbers in the last section of the address 
   var regex = /[0-9]+/g;
   var l = addressnummer.search(regex);
-  if (l == -1) {
-    return false;
-  } else {
-    return true;
-  }
+  console.log(addressnummer.search(regex));
+  if (l == -1) {return false;}else {return true; }
 }
 
 export function validateCity(name) {}
